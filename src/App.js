@@ -164,9 +164,9 @@ function App() {
         </div>
 
       <div className='mint-nft-area'>
-      <h3>Unlist an NFT from Sale</h3>
+      <h3>Delist an NFT from Sale</h3>
         <input type="text" onChange={(e) => setPrice(e.target.value)} />
-        <button onClick={() => unlistFromSale()}>Unlist</button>
+        <button onClick={() => unlistFromSale()}>Delist</button>
         </div>
 
       { user && user.addr && officialAddress && officialAddress !== ''
