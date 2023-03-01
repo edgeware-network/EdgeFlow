@@ -132,9 +132,26 @@ function App() {
       </div>
 
       <div className='mint-nft-area'>
-      <h3>Search NFT</h3>
-      <input type="text" title='Enter Name of NFT' onChange={(e) => setAddress(e.target.value)} />
-        <button onClick={() => setOfficialAddress(address)}>Search</button>
+      <h3>Bridge NFT</h3>
+<div className='label'>
+  <label for="from_nft">Source Chain : </label>
+  <select name="from_nft" id="from_nft">
+      <option value="edg">Edgeware</option>
+      <option value="flow">Flow</option>
+      <option value="eth">Ethereum</option>
+  </select>
+</div>
+
+<div className='label'>
+  <label for="dest_chain">Destination Chain : </label>
+  <select name="dest_chain" id="from_nft">
+      
+      <option value="flow">Flow</option>
+      <option value="edg">Edgeware</option>
+      <option value="eth">Ethereum</option>
+  </select>
+  </div>
+        <button onClick={() => setOfficialAddress(address)}>Bridge</button>
       </div>
 
       </section>
@@ -165,6 +182,12 @@ function App() {
         :
         null
       }
+
+<div className='mint-nft-area'>
+      <h3>Search NFT</h3>
+      <input type="text" title='Enter Name of NFT' onChange={(e) => setAddress(e.target.value)} />
+        <button onClick={() => setOfficialAddress(address)}>Search</button>
+      </div>
       </section>
 
       

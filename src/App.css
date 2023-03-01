@@ -10,6 +10,7 @@
 .wrapper-section {
   position: absolute;
   content: url('../logo.svg');
+  z-index: -1;
 }
 
 .wrapper-section {
@@ -81,10 +82,26 @@ header img {
   width: 300px;
   background-color: rgba(81, 81, 81, 0.44);
   margin: 2rem;
-  padding: 3rem 4rem;
+  padding: 3rem 3.5rem;
   border-radius: 0.5rem;
   border: #84066a 2px solid;
 }
+
+.mint-nft-area label {
+  color: #ECF2FF;
+  font-weight: 700;
+  display: inline;
+}
+
+.mint-nft-area select {
+  background-color: #282c34;
+  color: #ECF2FF;
+  padding: 0.3rem ;
+  font-weight: 700;
+  display: inline;
+  margin-bottom: 0.4rem;
+}
+
 
 .input-area {
   display: flex;
