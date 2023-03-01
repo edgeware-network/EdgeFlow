@@ -122,11 +122,12 @@ function App() {
       <button className='button-top' onClick={() => setupUser()}>Setup User</button>
       </section>
 
+      <div className='wrapper-section'> </div>
       <section className='mint-nft-section'>
       <div className='mint-nft-area'>
         <h3>Mint NFT</h3> 
-        <div className='input-area'><input type="text" title='Name of NFT' onChange={(e) => setNameOfNFT(e.target.value)} />
-        <input type="file" onChange={(e) => setFile(e.target.files[0])} /></div>
+        <input type="text" title='Name of NFT' onChange={(e) => setNameOfNFT(e.target.value)} />
+        <input type="file" onChange={(e) => setFile(e.target.files[0])} />
         <button onClick={() => mint()}>Mint</button>
       </div>
 
@@ -165,6 +166,8 @@ function App() {
         null
       }
       </section>
+
+      
       
     </div> 
   );

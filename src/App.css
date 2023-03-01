@@ -4,6 +4,38 @@
   margin: 10px auto;
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+
+.wrapper-section {
+  position: absolute;
+  content: url('../logo.svg');
+}
+
+.wrapper-section {
+  height: 100vh;
+  width: 100vh;
+  opacity: 0.2;
+  -webkit-animation: spin 60s linear infinite;
+  -moz-animation: spin 60s linear infinite;
+  animation: spin 60s linear infinite;
+}
+
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
 
 header{
@@ -30,7 +62,7 @@ header img {
   padding: 10px;
   margin: 0 5px;
   border-radius: 0.3rem;
-  border: none;
+  border: 2px solid black;
   font-family: inherit;
   font-weight: 600;
 }
@@ -47,10 +79,11 @@ header img {
   align-items: center;
   justify-content: center;
   width: 300px;
-  background-color: rgba(217, 217, 217, 24%);
+  background-color: rgba(81, 81, 81, 0.44);
   margin: 2rem;
   padding: 3rem 4rem;
   border-radius: 0.5rem;
+  border: #84066a 2px solid;
 }
 
 .input-area {
@@ -66,6 +99,9 @@ input[type='text'] {
   outline: none;
   border: 1px solid white;
   margin-bottom: 1rem;
+  padding: 0.4rem;
+  border-radius: 0.2rem;
+  width: 200px;
 
 }
 
@@ -88,13 +124,38 @@ input[type=file]::file-selector-button:hover {
   margin-top: 1rem;
   color: white;
   background-color: #B3005E;
-  border: none;
-  border-radius: 0.5rem;
-  padding: 0.3rem 1rem;
+  border: 1px solid black;
+  border-radius: 0.3rem;
+  padding: 0.5rem 2rem;
+  font-weight: 600;
 }
+
+.mint-nft-area button:hover {
+  background-color: #080808;
+  color: white;
+  transition: 300ms;
+  border: 1px solid #B3005E;
+}
+
+.mint-nft-area button:active {
+  background-image: linear-gradient(180deg, rgb(254, 30, 109), rgb(248, 93, 137));
+  color: white;
+  transition: 300ms;
+  border: 1px solid #B3005E;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+
+.button-top:hover {
+  background-color: #080808;
+  color: white;
+  transition: 300ms;
+  border: 2px solid #B3005E;
+  
 }
 
 @media (prefers-reduced-motion: no-preference) {
