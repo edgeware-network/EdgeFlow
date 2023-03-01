@@ -1,3 +1,5 @@
-# YouTube Video
+# EdgeFlow
+## Cross-chain (not just multi-chain!) NFT Marketplace for the trinity of Flow, Edgeware's EdgeEVM and Ethereum!
 
-You can view the YouTube video here: https://www.youtube.com/watch?v=RGNX2Xor1Y0
+Based on the NFT Marketplace implementation by Jacob Tucker:
+https://github.com/jacob-tucker/nftdapp-tutorial
