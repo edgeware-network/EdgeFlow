@@ -1,7 +1,97 @@
 .App {
-  text-align: center;
+  color: #ECF2FF;
+  max-width: 900px;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
 }
 
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+header img {
+  margin-top: 5px;
+}
+
+.top-button-area {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0
+}
+
+
+.button-top {
+  background-color: #B3005E;
+  color: whitesmoke;
+  padding: 10px;
+  margin: 0 5px;
+  border-radius: 0.3rem;
+  border: none;
+  font-family: inherit;
+  font-weight: 600;
+}
+
+.mint-nft-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.mint-nft-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  background-color: rgba(217, 217, 217, 24%);
+  margin: 2rem;
+  padding: 3rem 4rem;
+  border-radius: 0.5rem;
+}
+
+.input-area {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  
+}
+
+input[type='text'] {
+  background-color: #282c34;
+  color: white;
+  outline: none;
+  border: 1px solid white;
+  margin-bottom: 1rem;
+
+}
+
+input[type=file]::file-selector-button {
+  margin-right: 20px;
+  border: none;
+  background: #84066a;
+  padding: 5px 20px;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  transition: background .2s ease-in-out;
+}
+
+input[type=file]::file-selector-button:hover {
+  background: #df3a8a;
+}
+
+.mint-nft-area button {
+  margin-top: 1rem;
+  color: white;
+  background-color: #B3005E;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.3rem 1rem;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

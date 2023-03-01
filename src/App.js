@@ -111,28 +111,45 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Account address: {user && user.addr ? user.addr : ''}</h1>
-      <button onClick={() => logIn()}>Log In</button>
-      <button onClick={() => fcl.unauthenticate()}>Log Out</button>
-      <button onClick={() => setupUser()}>Setup User</button>
+      
 
-      <div>
-        <input type="text" onChange={(e) => setAddress(e.target.value)} />
-        <button onClick={() => setOfficialAddress(address)}>Search</button>
-      </div>
+      <header><img src="https://i.imgur.com/I7zCDR8.png" alt='main logo' height='50px'/>
+      <p className='address-area'>Account address: {user && user.addr ? user.addr : 'Not connected'}</p></header>
+      
+      <section className='top-button-area'>
+      <button className='button-top' onClick={() => logIn()}>Log In</button>
+      <button className='button-top' onClick={() => fcl.unauthenticate()}>Log Out</button>
+      <button className='button-top' onClick={() => setupUser()}>Setup User</button>
+      </section>
 
-      <div>
-        <input type="text" onChange={(e) => setNameOfNFT(e.target.value)} />
-        <input type="file" onChange={(e) => setFile(e.target.files[0])} />
+      <section className='mint-nft-section'>
+      <div className='mint-nft-area'>
+        <h3>Mint NFT</h3> 
+        <div className='input-area'><input type="text" title='Name of NFT' onChange={(e) => setNameOfNFT(e.target.value)} />
+        <input type="file" onChange={(e) => setFile(e.target.files[0])} /></div>
         <button onClick={() => mint()}>Mint</button>
       </div>
 
-      <div>
-        <input type="text" onChange={(e) => setID(e.target.value)} />
-        <input type="text" onChange={(e) => setPrice(e.target.value)} />
-        <button onClick={() => listForSale()}>Lift NFT for Sale</button>
-        <button onClick={() => unlistFromSale()}>Unlist an NFT from Sale</button>
+      <div className='mint-nft-area'>
+      <h3>Search NFT</h3>
+      <input type="text" title='Enter Name of NFT' onChange={(e) => setAddress(e.target.value)} />
+        <button onClick={() => setOfficialAddress(address)}>Search</button>
       </div>
+
+      </section>
+
+      <section className='mint-nft-section'> 
+      <div className='mint-nft-area'>
+      <h3>List an NFT for Sale</h3>
+      <input type="text" onChange={(e) => setID(e.target.value)} />
+        <button onClick={() => listForSale()}>List</button>
+        </div>
+
+      <div className='mint-nft-area'>
+      <h3>Unlist an NFT from Sale</h3>
+        <input type="text" onChange={(e) => setPrice(e.target.value)} />
+        <button onClick={() => unlistFromSale()}>Unlist</button>
+        </div>
 
       { user && user.addr && officialAddress && officialAddress !== ''
         ?
@@ -147,9 +164,9 @@ function App() {
         :
         null
       }
+      </section>
       
-      
-    </div>
+    </div> 
   );
 }
 
